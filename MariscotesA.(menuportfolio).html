@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cana Anime Cafe | Alligen Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cafe-brown: #6F4E37;
+            --soft-pink: #FFD1DC;
+            --hot-pink: #FF69B4;
+            --cream: #FFFDD0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--cream);
+            color: var(--cafe-brown);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--soft-pink);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--cafe-brown);
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover { color: var(--hot-pink); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid var(--soft-pink);
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5em;
+            margin: 0;
+            color: var(--soft-pink);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3em;
+            font-family: 'Dancing Script', cursive;
+            margin-bottom: 40px;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border: 2px solid var(--soft-pink);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .menu-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        .menu-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid var(--soft-pink);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img:hover { transform: scale(1.05); }
+
+        /* Loader Animation */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--hot-pink);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#activities-section">Activities</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <img src="C:\Users\alligen mariscotes\OneDrive\Desktop\1-4\id 2x2 or 1x1\alligen.jpg" alt="Alligen" class="profile-img">
+        <h1>Welcome to My Portfolio</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 10px auto;">
+            Hi! I am <strong>Alligen A. Mariscotes</strong>, 25 years old. <br>
+            A passionate learner in technology who loves creating and improving web development skills.
+        </p>
+    </section>
+
+    <div class="container">
+        <section id="menu">
+            <h2 class="section-title">Our Specialty Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\sakura latte.jpg" class="menu-img" alt="Sakura">
+                    <h3>Sakura Latte</h3>
+                    <p>Real cherry blossom syrup with creamy milk.</p>
+                </div>
+                <div class="menu-card">
+                    <img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\strawberry shortcake.jpg" class="menu-img" alt="Strawberry">
+                    <h3>Strawberry Cake</h3>
+                    <p>Soft, fluffy, and straight out of a shoujo anime.</p>
+                </div>
+                <div class="menu-card">
+                    <img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\matcha.jpg" class="menu-img" alt="Matcha">
+                    <h3>Premium Matcha</h3>
+                    <p>Authentic Uji matcha for a calm afternoon.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" style="margin-top: 80px;">
+            <h2 class="section-title">Cafe Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\coffeebread.jpg" alt="Art 1"></div>
+                <div class="gallery-item"><img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\coffee chocolate.jpg" alt="Art 2"></div>
+                <div class="gallery-item"><img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\spiced hot chocolate.jpg" alt="Art 3"></div>
+                <div class="gallery-item"><img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\banana latte.jpg" alt="Art 4"></div>
+            </div>
+        </section>
+
+        <section id="activities-section" style="padding: 60px 0; margin-top: 50px;">
+            <h2 class="section-title">My Activities & Projects</h2>
+            <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid var(--soft-pink);">
+                
+                <div style="display: flex; background: #f8f9fa; border-bottom: 2px solid var(--soft-pink);">
+                    <button onclick="openMainTab(event, 'act4-content')" class="main-tab-btn" style="flex:1; padding:15px; border:none; cursor:pointer; font-weight:bold; background: #ff69b4; color: white;">Activity 4</button>
+                    <button onclick="openMainTab(event, 'act5-content')" class="main-tab-btn" style="flex:1; padding:15px; border:none; cursor:pointer; font-weight:bold; background: transparent; color: black;">Activity 5</button>
+                    <button onclick="openMainTab(event, 'act6-content')" class="main-tab-btn" style="flex:1; padding:15px; border:none; cursor:pointer; font-weight:bold; background: transparent; color: black;">Activity 6</button>
+                </div>
+
+                <div id="act4-content" class="main-tab-panel" style="display: block; padding: 30px;">
+                    <h3 style="color: #d63384; text-align: center;">Social Media Content Plan</h3>
+                    <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
+                        <button onclick="switchTab4('cal4')" style="padding: 8px 20px; border-radius: 20px; border: 1px solid #d63384; background: #fff5f8; cursor: pointer;">📅 Calendar</button>
+                        <button onclick="switchTab4('post4')" style="padding: 8px 20px; border-radius: 20px; border: 1px solid #d63384; background: #fff5f8; cursor: pointer;">📸 Instagram Post</button>
+                    </div>
+                    
+                    <div id="cal4" class="content-section-4" style="display: block;">
+                        <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+                            <tr style="background: #fff5f8;">
+                                <th style="padding:10px; border:1px solid #eee;">Day</th>
+                                <th style="padding:10px; border:1px solid #eee;">Topic</th>
+                            </tr>
+                            <tr><td style="padding:10px; border:1px solid #eee; text-align: center;">Mon</td><td style="padding:10px; border:1px solid #eee;">🌸 Sakura Latte Feature</td></tr>
+                            <tr><td style="padding:10px; border:1px solid #eee; text-align: center;">Wed</td><td style="padding:10px; border:1px solid #eee;">🎨 Latte Art Process</td></tr>
+                            <tr><td style="padding:10px; border:1px solid #eee; text-align: center;">Fri</td><td style="padding:10px; border:1px solid #eee;">🎁 Weekend Promo</td></tr>
+                        </table>
+                    </div>
+
+                    <div id="post4" class="content-section-4" style="display: none;">
+                        <div style="max-width: 300px; margin: 0 auto; background: white; border: 1px solid #dbdbdb; border-radius: 10px; overflow: hidden; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                            <div style="padding: 10px; display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 25px; height: 25px; border-radius: 50%; background: linear-gradient(45deg, #f09433, #bc1888); display: flex; align-items: center; justify-content: center; color: white; font-size: 10px;">☕</div>
+                                <span style="font-weight: bold; font-size: 12px;">cana_anime_cafe</span>
+                            </div>
+                            <img src="C:\Users\alligen mariscotes\OneDrive\Documents\Pictures\cana_anime_cafe.jpg" style="width: 100%; display: block;" alt="Cafe Post">
+                            <div style="padding: 10px; font-size: 16px;">❤️ 💬 ✈️</div>
+                            <div style="padding: 0 10px 10px 10px; font-size: 12px;">
+                                <strong>1,205 likes</strong><br>
+                                <strong>cana_anime_cafe</strong> Our Sakura Latte is finally here! 🌸✨
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="act5-content" class="main-tab-panel" style="display: none; padding: 30px; text-align: center;">
+                    <h3 style="color: #8d5524;">Tech Infrastructure Strategy</h3>
+                    <iframe src="C:\Users\alligen mariscotes\Downloads\Tech Infrastructure Strategy.pdf" width="100%" height="500px" style="border:1px solid #ddd; border-radius: 10px;"></iframe>
+                </div>
+
+                <div id="act6-content" class="main-tab-panel" style="display: none; padding: 30px;">
+                    <h3 style="color: #8d5524; text-align: center;">Digital Resume & QR</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h4>Alligen A. Mariscotes</h4>
+                            <ul style="font-size: 0.9rem;">
+                                <li><b>Skill:</b> Responsive Web Design</li>
+                                <li><b>Skill:</b> Data Management (Excel)</li>
+                                <li><b>Project:</b> Cana Anime Cafe Concept</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 250px; text-align: center;">
+                            <img src="C:\Users\alligen mariscotes\OneDrive\Desktop\1-4\MARISCOTES PROJECT\Resume alligen.jpg" alt="Resume" style="width: 100%; max-width: 250px; border: 1px solid #ddd; border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" style="padding: 60px 20px; background: white; border-radius: 30px; margin-top: 50px; border: 3px dashed var(--hot-pink);">
+            <h2 class="section-title">Leave a Message</h2>
+            <div style="max-width: 600px; margin: auto;">
+                <p style="text-align: center; color: var(--cafe-brown); font-weight: 600;">Order a message or just say Hi! ☕</p>
+                <form>
+                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 10px; border: 2px solid var(--soft-pink); box-sizing: border-box;">
+                    <input type="email" placeholder="Your Email" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 10px; border: 2px solid var(--soft-pink); box-sizing: border-box;">
+                    <textarea rows="4" placeholder="Your Message" style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 10px; border: 2px solid var(--soft-pink); box-sizing: border-box;"></textarea>
+                    <button type="button" style="width: 100%; background: var(--hot-pink); color: white; border: none; padding: 15px; border-radius: 50px; font-weight: bold; cursor: pointer;">Send to Cana Cafe</button>
+                </form>
+            </div>
+        </section> 
+    </div>
+
+    <footer style="background: var(--cafe-brown); color: white; text-align: center; padding: 30px; margin-top: 50px;">
+        <p>&copy; 2026 Alligen Mariscotes | Cana Anime Cafe Concept</p>
+    </footer>
+
+    <script>
+        function openMainTab(evt, tabName) {
+            var i, panels, btns;
+            panels = document.getElementsByClassName("main-tab-panel");
+            for (i = 0; i < panels.length; i++) { panels[i].style.display = "none"; }
+            btns = document.getElementsByClassName("main-tab-btn");
+            for (i = 0; i < btns.length; i++) { 
+                btns[i].style.background = "transparent"; 
+                btns[i].style.color = "black";
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.style.background = "#ff69b4";
+            evt.currentTarget.style.color = "white";
+        }
+
+        function switchTab4(sectionId) {
+            document.querySelectorAll('.content-section-4').forEach(div => {
+                div.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
